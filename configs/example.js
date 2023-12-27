@@ -56,8 +56,8 @@ config.primary.address = '[address]';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Firocoin';
-config.primary.coin.symbol = 'FIRO';
+config.primary.coin.name = 'Kiirocoin';
+config.primary.coin.symbol = 'KIIRO';
 config.primary.coin.algorithm = 'firopow';
 
 // Daemon Configuration
@@ -65,7 +65,7 @@ config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '127.0.0.1';
-daemons1.port = 8888;
+daemons1.port = 8999;
 daemons1.username = '';
 daemons1.password = '';
 config.primary.daemons.push(daemons1);
