@@ -17,7 +17,7 @@ const Transactions = function(config, rpcData) {
       private: Buffer.from('0488ADE4', 'hex').readUInt32LE(0),
     },
     peerMagic: 'e3d9fef1',
-    pubKeyHash: Buffer.from('52', 'hex').readUInt8(0),
+    pubKeyHash: Buffer.from('2D', 'hex').readUInt8(0),
     scriptHash: Buffer.from('07', 'hex').readUInt8(0),
     wif: Buffer.from('D2', 'hex').readUInt8(0),
     coin: 'firo',
