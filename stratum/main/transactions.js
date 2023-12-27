@@ -25,8 +25,8 @@ const Transactions = function(config, rpcData) {
 
   // Mainnet Founder Rewards
   this.founderMainnet = [
-    { address: 'aLgRaYSFk6iVw2FqY1oei8Tdn2aTsGPVmP', amount: 93750000 },
-    { address: 'aFA2TbqG9cnhhzX5Yny2pBJRK5EaEqLCH7', amount: 62500000 }];
+    { address: 'KWTco92wURX5Jwu3mMdWrs36j574meAvew', amount: 300000000 },
+    { address: 'KDW8CeScVpWFzekvZm4f37qs5GxByEGSKE', amount: 300000000 }];
 
   // Testnet Configuration
   this.configTestnet = {
