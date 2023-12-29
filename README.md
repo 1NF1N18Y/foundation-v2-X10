@@ -1,4 +1,4 @@
-# Foundation Stratum (Kiirocoin, v2) NOT WORKING...YET! :)
+# Foundation Stratum (Kiirocoin, v2)
 
 [![Codecov Coverage](https://img.shields.io/codecov/c/github/blinkhash/foundation-v2-firocoin.svg?style=flat-square)](https://codecov.io/gh/blinkhash/foundation-v2-firocoin/)
 [![Foundation CI](https://github.com/blinkhash/foundation-v2-firocoin/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/blinkhash/foundation-v2-firocoin/actions/workflows/build.yml)
