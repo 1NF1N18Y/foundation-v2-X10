@@ -20,7 +20,7 @@ const Transactions = function(config, rpcData) {
     pubKeyHash: Buffer.from('2D', 'hex').readUInt8(0),
     scriptHash: Buffer.from('07', 'hex').readUInt8(0),
     wif: Buffer.from('D2', 'hex').readUInt8(0),
-    coin: 'firo',
+    coin: 'kiiro',
   };
 
   // Mainnet Founder Rewards
