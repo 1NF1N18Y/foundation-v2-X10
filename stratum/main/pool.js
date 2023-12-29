@@ -1377,9 +1377,9 @@ const Pool = function(config, configMain, callback) {
       // Build Share Submission Data
       const submission = {
         extraNonce1: client.extraNonce1,
-        nonce: message.params[2].substr(2),
-        headerHash: message.params[3].substr(2),
-        mixHash: message.params[4].substr(2),
+        nonce: Boolean(message.params[2].match(/^0x[0-9a-f]+$/i)) ? message.params[2].substr(2) : message.params[2],
+        headerHash: Boolean(message.params[3].match(/^0x[0-9a-f]+$/i)) ? message.params[2].substr(2) : message.params[3],
+        mixHash: Boolean(message.params[4].match(/^0x[0-9a-f]+$/i)) ? message.params[2].substr(2) : message.params[4],
       };
 
       // Submit Share to Job Manager
