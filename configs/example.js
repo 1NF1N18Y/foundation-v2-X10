@@ -1,6 +1,6 @@
 /*
  *
- * Example (Firocoin)
+ * Example (Kiirocoin)
  *
  */
 
@@ -65,9 +65,9 @@ config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '127.0.0.1';
-daemons1.port = 8999;
-daemons1.username = '';
-daemons1.password = '';
+daemons1.port = 8080;
+daemons1.username = 'my-user';
+daemons1.password = 'my-pass';
 config.primary.daemons.push(daemons1);
 
 // Recipients Configuration
@@ -75,7 +75,7 @@ config.primary.recipients = [];
 
 const recipient1 = {};
 recipient1.address = '[address]';
-recipient1.percentage = 0.05;
+recipient1.percentage = 0.005;
 config.primary.recipients.push(recipient1);
 
 // ZMQ Configuration
