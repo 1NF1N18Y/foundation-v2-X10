@@ -10,7 +10,7 @@
 // Miscellaneous Configuration
 const config = {};
 config.language = 'english';
-config.identifier = '';
+config.identifier = 'kiirocoin';
 
 // Logger Configuration
 config.logger = {};
@@ -20,7 +20,7 @@ config.logger.logLevel = 'log';
 // Clustering Configuration
 config.clustering = {};
 config.clustering.enabled = true;
-config.clustering.forks = 'auto';
+config.clustering.forks = 2;
 
 // TLS Configuration
 config.tls = {};
