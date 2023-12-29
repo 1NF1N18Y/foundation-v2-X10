@@ -4,7 +4,7 @@
  *
  */
 
-// Main Configuration
+// Main Configuration - edit and rename to kiirocoin.js
 ////////////////////////////////////////////////////////////////////////////////
 
 // Miscellaneous Configuration
