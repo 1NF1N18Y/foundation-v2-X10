@@ -1377,9 +1377,9 @@ const Pool = function(config, configMain, callback) {
       // Build Share Submission Data
       const submission = {
         extraNonce1: client.extraNonce1,
-        nonce: (message.params[2].split('0x').length > 1) ? message.params[2].substr(2) : message.params[2],
-        headerHash: (message.params[3].split('0x').length > 1) ? message.params[3].substr(2) : message.params[3],
-        mixHash: (message.params[4].split('0x').length > 1) ? message.params[4].substr(2) : message.params[4],
+        nonce: utils.prune0x(message.params[2]),
+        headerHash: utils.prune0x(message.params[3]),
+        mixHash: utils.prune0x(message.params[4]),
       };
 
 
