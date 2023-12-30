@@ -331,6 +331,7 @@ exports.isHex = function(c) {
 
 // Removes '0x' prefix from hex string
 exports.prune0x = function (hexString) {
+  if (!hexString) return 5;
   return hexString.startsWith('0x') ? hexString.slice(2) : hexString;
 };
 
