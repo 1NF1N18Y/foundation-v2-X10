@@ -10,6 +10,7 @@
 #include "algorithms/firopow/firopow.h"
 #include "algorithms/firopow/firopow.hpp"
 #include "algorithms/firopow/firopow_progpow.hpp"
+#include "algorithms/main/x10/x10.h"
 
 using namespace node;
 using namespace v8;
@@ -62,9 +63,28 @@ NAN_METHOD(sha256d) {
   info.GetReturnValue().Set(Nan::CopyBuffer(output, 32).ToLocalChecked());
 }
 
+// X10 Algorithm
+NAN_METHOD(x10) {
+
+  // Check Arguments for Errors
+  if (info.Length() < 1)
+    return THROW_ERROR_EXCEPTION("You must provide one argument.");
+
+  // Process/Define Passed Parameters
+  char * input = Buffer::Data(Nan::To<v8::Object>(info[0]).ToLocalChecked());
+  uint32_t input_len = Buffer::Length(Nan::To<v8::Object>(info[0]).ToLocalChecked());
+  char output[32];
+
+  // Hash Input Data and Return Output
+  x10_hash(input, output, input_len);
+  info.GetReturnValue().Set(Nan::CopyBuffer(output, 32).ToLocalChecked());
+}
+
+
 NAN_MODULE_INIT(init) {
   Nan::Set(target, Nan::New("firopow").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(firopow)).ToLocalChecked());
   Nan::Set(target, Nan::New("sha256d").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(sha256d)).ToLocalChecked());
+  Nan::Set(target, Nan::New("x10").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(x10)).ToLocalChecked());
 }
 
 NODE_MODULE(hashing, init)
